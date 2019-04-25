@@ -48,8 +48,8 @@ public class Rental {
         return frequentRenterPoints;
     }
 
-    String printRentalRecord(double thisAmount) {
+    String printRentalRecord(double price) {
         return "\t" + getMovie().getTitle() + "\t"
-                + thisAmount + "\n";
+                + price + "\n";
     }
 }

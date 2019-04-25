@@ -4,6 +4,10 @@ import java.util.Enumeration;
 import java.util.Vector;
 
 public class Customer {
+    public static final String PRE_AMOUNT_LOG_STR = "Amount owed is ";
+    public static final String PRE_FRE_RENT_POINT_LOG_STR = "You earned ";
+    public static final String POST_AMOUNT_LOG_STR = System.getProperty("line.separator");
+    public static final String POST_FRE_RENT_POINT_LOG_STR = " frequent renter points";
     private String name; // 姓名
     private Vector rentals = new Vector(); // 租借记
 
@@ -35,8 +39,8 @@ public class Customer {
             totalAmount += thisAmount;
         }
         // add footer lines（结尾打印）
-        result += printLog(totalAmount, "Amount owed is ", "\n");
-        result += printLog(frequentRenterPoints, "You earned ", " frequent renter points");
+        result += printLog(totalAmount, PRE_AMOUNT_LOG_STR, POST_AMOUNT_LOG_STR);
+        result += printLog(frequentRenterPoints, PRE_FRE_RENT_POINT_LOG_STR, POST_FRE_RENT_POINT_LOG_STR);
         return result;
     }
 
