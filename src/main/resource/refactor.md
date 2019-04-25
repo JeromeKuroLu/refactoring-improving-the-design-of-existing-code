@@ -1,6 +1,6 @@
-#### ---基于《重构--改善既有代码的设计》（refactoring-improving-the-design-of-existing-code）
+#### ---基于《重构--改善既有代码的设计》（refactoring-improving-the-design-of-existing-code）  
 
-##代码的坏味道
+## 代码的坏味道
 
 ### *重复的代码（Duplicated Code）*
 
