@@ -31,15 +31,17 @@ public class Customer {
             thisAmount = each.getAmount();
             frequentRenterPoints = each.getFrequentRenterPoints(frequentRenterPoints);
             // show figures for this rental（显示此笔租借记录）
-            result += "\t" + each.getMovie().getTitle() + "\t"
-                    + String.valueOf(thisAmount) + "\n";
+            result += each.printRentalRecord(thisAmount);
             totalAmount += thisAmount;
         }
         // add footer lines（结尾打印）
-        result += "Amount owed is " + totalAmount + "\n";
-        result += "You earned " + frequentRenterPoints
-                + " frequent renter points";
+        result += printLog(totalAmount, "Amount owed is ", "\n");
+        result += printLog(frequentRenterPoints, "You earned ", " frequent renter points");
         return result;
+    }
+
+    private String printLog(double value, String preStr, String postStr) {
+        return preStr + value + postStr;
     }
 
 }
